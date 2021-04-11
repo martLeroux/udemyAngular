@@ -11,7 +11,7 @@
       </ol>
       <button (click)="onButtonClick()">Display Details</button>
       <p *ngIf="paragraphVisibility">Secret password = tuna</p>
-      <p *ngFor="let buttonClick of buttonClicks;" [ngStyle]="{backgroundColor: getBackground(buttonClick)}" [ngClass]="{whiteText: buttonClick >=5}">
+      <p *ngFor="let buttonClick of buttonClicks; index as i;" [ngStyle]="{backgroundColor: getBackground(i)}" [ngClass]="{whiteText: i >=4}">
         {{buttonClick}}
       </p>
     </div>

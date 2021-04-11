@@ -13,12 +13,12 @@ export class AppComponent {
   onButtonClick() {
     this.paragraphVisibility = !this.paragraphVisibility;
     this.counter = this.counter + 1;
-    this.buttonClicks.push(this.counter);
+    this.buttonClicks.push(new Date());
     console.log(this.counter);
   }
 
   getBackground(counter) {
     console.log(counter);
-    return counter >= 5 ? 'blue' : '';
+    return counter >= 4 ? 'blue' : '';
   }
 }
