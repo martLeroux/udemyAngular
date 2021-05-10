@@ -12,7 +12,7 @@ export class RecipesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(selectedRecipe);
+    console.log(this.selectedRecipe);
   }
 
 }
