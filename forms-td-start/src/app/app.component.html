@@ -21,6 +21,10 @@
             <option value="teacher ">Your first teacher?</option>
           </select>
         </div>
+        <div class="form-group">
+          <textarea name="questionAnswer" rows="3" [(ngModel)]="answer" class="form-control"></textarea>
+          <p>Your reply: {{answer}}</p>
+        </div>
         <button [disabled]="!f.valid" class="btn btn-primary " type="submit ">Submit</button>
       </form>
     </div>
