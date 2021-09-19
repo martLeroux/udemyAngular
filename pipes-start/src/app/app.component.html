@@ -4,6 +4,9 @@
       <input type="text" [(ngModel)]="filteredStatus" />
       <br/>
       <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+      <br/>
+      <br/>
+      <H2>App status: {{appStatus | async}}</H2>
       <ul class="list-group">
         <li class="list-group-item" *ngFor="let server of servers | filter:filteredStatus:'status'" [ngClass]="getStatusClasses(server)">
           <span class="badge">
