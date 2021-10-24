@@ -33,9 +33,9 @@ export class PostsService {
     searchParams = searchParams.append('custom', 'key');
     return this.http
       .get<{ [key: string]: Post }>('https://ng-complete-guide-ae381-default-rtdb.firebaseio.com/posts.json', {
-        headers: new HttpHeaders({
-          "Custom-Header": 'Hello'
-        }), params: searchParams
+        headers: new HttpHeaders({ "Custom-Header": 'Hello' }),
+        params: searchParams,
+        responseType: 'json'
       })
       .pipe(
         map(responseData => {
@@ -57,7 +57,8 @@ export class PostsService {
   deletePosts() {
     return this.http.delete('https://ng-complete-guide-ae381-default-rtdb.firebaseio.com/posts.json',
       {
-        observe: 'events'
+        observe: 'events',
+        responseType: 'json'
       }).pipe(tap(event => {
         console.log(event);
         if (event.type === HttpEventType.Sent) {
