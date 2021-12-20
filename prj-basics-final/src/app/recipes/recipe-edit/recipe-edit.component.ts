@@ -91,4 +91,8 @@ export class RecipeEditComponent implements OnInit {
     });
   }
 
+  get controls() { // a getter!
+    return (<FormArray>this.recipeForm.get('ingredients')).controls;
+  }
+
 }
