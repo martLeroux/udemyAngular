@@ -11,11 +11,11 @@ import { Post } from './post.model';
 export class AppComponent implements OnInit {
   posts: Post[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.http
-      .get<Post[]>('https://jsonplaceholder.typicode.com/posts')
+      .get<Post[]>('https://jsonplaceholder.cypress.io/posts')
       .subscribe(fetchedPosts => (this.posts = fetchedPosts));
   }
 }
