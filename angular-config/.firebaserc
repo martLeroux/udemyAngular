@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-config-abf1b": {
+      "hosting": {
+        "angular-config": [
+          "angular-config-abf1b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-config-abf1b"
+  }
+}
